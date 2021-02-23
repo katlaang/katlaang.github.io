@@ -1,7 +1,6 @@
 html, body{
     height: 100%;
     width: 100%;
-    overflow: hidden;
 background-color: #EEFBFB;
     
 }
@@ -27,7 +26,10 @@ ul.topnav li a:hover{
 
 }
 
-
+.assignments {
+    height: auto;
+    overflow: scroll;
+}
 .footer{
    
     background: rgb(34,193,195);
@@ -36,15 +38,12 @@ ul.topnav li a:hover{
     
     display: flex;
     flex-direction: column;
-    position: absolute;
     bottom: 0;
     width: 100%;
    
     
 }
-.contact{
-    float: left;
-}
+
 .validators{
     padding-left: 20px;
     padding-top: 50px;
