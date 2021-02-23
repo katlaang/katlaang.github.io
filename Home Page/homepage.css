@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+background-color: #EEFBFB;
+    
+}
+
+
+
+.profilepicture {
+    background-image: url(background3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%, 100%;
+    padding: 0;
+    
+}
+.image{
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    
+}
+ul.topnav li a:hover{
+    font-weight: bold;
+
+}
+
+
+.footer{
+   
+    background: rgb(34,193,195);
+   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(38,64,93,1) 100%);
+    color:white;
+    
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   
+    
+}
+.contact{
+    float: left;
+}
+.validators{
+    padding-left: 20px;
+    padding-top: 50px;
+}
