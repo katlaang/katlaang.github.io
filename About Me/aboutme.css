@@ -1,0 +1,124 @@
+
+body{
+ background-image:url(background3.jpg);
+ background-size: cover;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+
+ color:black;
+ font-family: "Open Sans", "Helvetica Neue", sans-serif;
+ font-size: 1.4em; 
+    
+}
+html, body{
+ height: 100%;
+ width:100%;
+ 
+}
+.line {
+margin-left: -20px;
+ margin-right: -20px;
+ border-bottom: 1px solid grey;
+}
+
+.firstcharacter{
+ color: purple;
+  float: left;
+  font-family: Georgia;
+  font-size: 50px;
+  line-height: 60px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+
+.content{ /*centering the content of the website*/
+ max-width: 900px;
+ border-radius: 20px;
+ margin:auto;
+ background-color: azure;
+ padding: 20px 20px 20px 20px;
+}
+
+
+.wap-intro{
+ margin:auto;
+color: white;
+ width: 900px;
+padding-bottom: 30px;
+ font-size: 2em;
+}
+
+.imagecontainer {
+ display: flex;
+margin: auto;
+}
+
+.imagesplit {
+ flex: 0 0 50%;
+}
+.picturetext{
+ color: red;
+ font-style: italic;
+ font-size: 85%;
+ 
+ 
+}
+
+.social{
+ text-align: center;
+}
+
+h2{
+ color: darkred;
+}
+ul.courses li a: link{
+ text-decoration: none;
+ color:inherit;
+}
+
+ol.courses li a:hover{
+text-decoration: underline;
+ color:blue;
+}
+
+dl {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+dt{
+ color:darkgoldenrod;
+ font-size: 90%
+}
+dd{
+ font-size: 80%;
+}
+
+
+ol.movies li a:link{
+text-decoration: none;
+ color:inherit;
+}
+
+ol.movies li a:hover{
+text-decoration: underline;
+ color:blue;
+}
+ 
+
+footer{
+ display: flex;
+ flex-direction: column;
+  text-align: center;
+  background-color: #111;
+ color: white;
+  text-decoration: none;
+margin-top: 20px;
+    
+   
+    
+}
+
