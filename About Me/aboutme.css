@@ -72,15 +72,12 @@ margin: auto;
 h2{
  color: darkred;
 }
-ul.courses li a: link{
- text-decoration: none;
- color:inherit;
-}
 
-ol.courses li a:hover{
+ul.courses li a:hover{
 text-decoration: underline;
  color:blue;
 }
+
 
 dl {
   display: block;
