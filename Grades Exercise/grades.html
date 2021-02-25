@@ -20,16 +20,19 @@
                     <legend class="formname">Retrieve your grade:</legend> <br><br>
 
                     <label class="details"> Name: </label>
-                    <input type="text" name="name" required><br><br>
+                    <input type="text" name="name" required/><br><br>
 
                     <label class="details">Student ID:</label> 
-                    <input type="text" name="stuid" required><br><br>
+                    <input type="text" name="stuid" required/><br><br>
                     
                          <label>Select Your Entry</label><br><br>
-                    
-                    <input type="radio" name="entry" value="February2020"> February 2020<br>
-                    <input type="radio" name="entry" value="August 2020"> August 2020<br>
-                    <input type="radio"  name="entry" value="November 2020" checked> November 2020<br><br>
+                        <input type="radio" name="entry" id="feb"  value="February2020"/>
+                        <label for="February2020">February 2020</label><br>
+                        <input type="radio" name="entry" id="aug" value="August2020"/>
+                        <label for="August2020">August 2020</label><br>
+
+                        <input type="radio" name="entry" id="nov" value="November2020" checked/>
+                        <label for="November2020">November 2020</label><br><br>
                     
                     <label>Select Assignment:</label>
                     <select name="assignmentlist" required><br><br>
