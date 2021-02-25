@@ -1,6 +1,6 @@
 .userinput {
     width: auto;
-    background-color:#b7aecf;
+    background-color: #b7aecf;
     box-shadow: 1px 1px;
     border-radius: 5px;
 }
@@ -13,20 +13,20 @@
 
 .rows {
     display: inline-block;
-   
+
 }
 
 .labelcolumn {
     width: 30%;
     float: left;
-     margin-bottom: 5px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
 .inputcolumn {
     width: 70%;
     float: left;
-     margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .submitbutton {
