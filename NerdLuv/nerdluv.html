@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NerdLuv</title>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="nerdluv.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="content">
+        <h1 Grades></h1>
+        <div class="form">
+            <form action="" method="get">
+                <fieldset class="userinput">
+                    <legend class="formname">New User Signup:</legend> <br>
+                    <div class="rows">
+                        <div class="labelcolumn">
+                            <label class="details"> Name: </label>
+                        </div>
+                        <div class="inputcolumn">
+                            <input type="text" name="name" size="16" required /><br>
+                        </div>
+                        <div class="labelcolumn">
+                            <label class="gender" name="gender">Gender:</label>
+                        </div>
+                        <div class="inputcolumn">
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female" value="female" checked>
+                            <label for="female">Female</label><br>
+                        </div>
+                        <div class="labelcolumn">
+                            <label class="agedetails">Age:</label>
+                        </div>
+                        <div class="inputcolumn">
+                            <input type="text" name="age" maxlength="2" size="6" required /><br>
+                        </div>
+                        <div class="labelcolumn">
+                            <label>Personality type:</label>
+                        </div>
+                        <div class="inputcolumn">
+                            <input type="text" name="personality" size="6" required />
+                            <span class="typelink">(<a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp" target="_blank"> Don't know your type?</a>)</span> <br>
+                        </div>
+                        <div class="labelcolumn">
+                            <label>Favourite OS:</label>
+                        </div>
+                        <div class="inputcolumn">
+                            <select name="oslist" required><br>
+                                <option value="windows" selected> Windows </option><br>
+                                <option value="Mac OS X"> Mac OS X </option><br>
+                                <option value="Linux"> Linux</option><br>
+
+                            </select><br><br>
+                        </div>
+                        <div class="labelcolumn">
+                            <label class="details">Seeking age:</label>
+                        </div>
+                        <div class="inputcolumn">
+                            <input type="text" name="minage" min="18" placeholder="min" maxlength="2" size="6" required />
+                            <span>to</span>
+                            <input type="text" name="maxage" placeholder="max" maxlength="2" size="6" required /><br>
+                        </div>
+                        <div>
+                            <input type="submit" class="submitbutton" value="Sign Up"><br>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="validators">
+        <a href="http://validator.w3.org/check/referer"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator" /></a>
+
+        <a href="http://validator.w3.org/check/referer"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png" alt="css validator" /></a>
+
+    </div>
+</body>
+
+</html>

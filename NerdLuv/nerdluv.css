@@ -1,0 +1,41 @@
+.userinput {
+    width: 100%;
+    background-color:#b7aecf;
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+}
+
+.formname {
+    z-index: 2;
+    background-color: white;
+    border-style: outset;
+}
+
+.rows {
+    display: inline-block;
+   
+}
+
+.labelcolumn {
+    width: 30%;
+    float: left;
+     margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inputcolumn {
+    width: 70%;
+    float: left;
+     margin-bottom: 5px;
+}
+
+.submitbutton {
+    background-color: #f3aef6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    color: #E75480;
+    text-decoration: none;
+}
