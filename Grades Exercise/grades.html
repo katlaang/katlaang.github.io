@@ -3,11 +3,11 @@
 
 <head>
     <title>Retrieve Grade</title>
-<meta charset="utf-8" />
-<meta name="referrer" content="origin">
-<meta name="referrer" content="origin-when-cross-origin">
-<meta name=viewport content="width=device-width, initial-scale=1">
-   <link href="grades.css" type="text/css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="grades.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,40 +20,45 @@
                     <legend class="formname">Retrieve your grade:</legend> <br><br>
 
                     <label class="details"> Name: </label>
-                    <input type="text" name="name" required/><br><br>
+                    <input type="text" name="name" required /><br><br>
 
-                    <label class="details">Student ID:</label> 
-                    <input type="text" name="stuid" required/><br><br>
-                    
-                         <label>Select Your Entry</label><br><br>
-                        <input type="radio" name="entry" id="feb"  value="February2020"/>
-                        <label for="February2020">February 2020</label><br>
-                        <input type="radio" name="entry" id="aug" value="August2020"/>
-                        <label for="August2020">August 2020</label><br>
+                    <label class="details">Student ID:</label>
+                    <input type="text" name="stuid" required /><br><br>
 
-                        <input type="radio" name="entry" id="nov" value="November2020" checked/>
-                        <label for="November2020">November 2020</label><br><br>
-                    
+                    <label>Select Your Entry</label><br><br>
+                    <input type="radio" name="entry" id="feb" value="February2020" />
+                    <label for="February2020">February 2020</label><br>
+                    <input type="radio" name="entry" id="aug" value="August2020" />
+                    <label for="August2020">August 2020</label><br>
+
+                    <input type="radio" name="entry" id="nov" value="November2020" checked />
+                    <label for="November2020">November 2020</label><br><br>
+
                     <label>Select Assignment:</label>
                     <select name="assignmentlist" required><br><br>
-                       <option value="homepage" > Home Page Lab</option><br><br>
+                        <option value="homepage"> Home Page Lab</option><br><br>
                         <option value="About me"> About Me </option><br><br>
                         <option value="recipe"> Recipe</option><br><br>
-                        <option value="Review Movie">  Review Movie</option><br><br>
-                        <option value="nerdluv">  NerdLuv </option><br><br>
-                        
-                    </select><br><br>
-                    
-                    <label>Acknowledgement</label><br><br>
-                    <input type="checkbox" value="acknowledgement" required> I acknowledge that the information provided is correct and is my own personal information. I confirm that the grade I am looking for is mine <br><br><br>
-                    
-                    <div class="submitbutton">
-                    <input type="submit"  class="submitbutton"value="Get Grades"><br><br>
-                        </div>
-                    
-            </fieldset>
+                        <option value="Review Movie"> Review Movie</option><br><br>
+                        <option value="nerdluv"> NerdLuv </option><br><br>
 
-    </form><br>
+                    </select><br><br>
+
+                    <label>Acknowledgement</label><br><br>
+                    <input type="checkbox" value="acknowledgement" required />
+                    <label for="ack">I acknowledge that the information provided is correct and is my own personal
+                        information. I confirm that the grade I am
+                        looking for is mine.</label>
+
+                    <br><br>
+
+                    <div class="submitbutton">
+                        <input type="submit" class="submitbutton" value="Get Grades" /><br><br>
+                    </div>
+
+                </fieldset>
+
+            </form><br>
 
         </div>
 
@@ -61,11 +66,11 @@
 
 
     <div class="validators">
-    <a href='https://validator.w3.org/check?uri=referer'><img class='validators'
-            src='http://mumstudents.org/cs472/2013-09/images/w3c-html.png'></a>
+        <a href='https://validator.w3.org/check?uri=referer'><img class='validators'
+                src='http://mumstudents.org/cs472/2013-09/images/w3c-html.png'></a>
 
-    <a href='http://jigsaw.w3.org/css-validator/check/referer'><img class='validators'
-            src='http://mumstudents.org/cs472/2013-09/images/w3c-css.png'></a>
+        <a href='http://jigsaw.w3.org/css-validator/check/referer'><img class='validators'
+                src='http://mumstudents.org/cs472/2013-09/images/w3c-css.png'></a>
 
     </div>
 </body>
