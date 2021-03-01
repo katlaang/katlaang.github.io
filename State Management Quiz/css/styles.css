@@ -1,0 +1,19 @@
+body{
+    text-align: justify;
+    background-color: #f0f8ff;
+    padding: 50px;
+
+   
+}
+
+.answer{
+    background-color: #D0E2F2;
+}
+fieldset{
+     border-radius: 10px;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
