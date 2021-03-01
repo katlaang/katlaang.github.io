@@ -1,15 +1,16 @@
-body{
+body {
     text-align: justify-all;
     font-size: 14pt;
     background-color: aliceblue;
-    
-}
-fieldset{
-    padding-bottom: 20px;
-    
-    
+
 }
 
-p.answer{
-    background-color: lightgray;
+fieldset {
+    padding-bottom: 20px;
+
+
+}
+
+p.answer {
+    background-color: #E8E8E8;
 }
