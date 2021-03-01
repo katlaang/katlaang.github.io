@@ -9,117 +9,117 @@
 </head>
 
 <body>
-    
-    
+
+
     <form action="" method="post">
         <fieldset>
             <h1>State Management Quiz</h1>
-    <hr />
-    <p class="question">Question 1: Can post requests be bookmarked? What are the problems?</p>
-    <p class="answer">NO, Post request cannot be bookmarked because the data sent to the server with POST is stored in the request body of the
-    HTTP request.
+            <hr />
+            <p class="question">Question 1: Can post requests be bookmarked? What are the problems?</p>
+            <p class="answer">NO, Post request cannot be bookmarked because the data sent to the server with POST is stored in the request body of the
+                HTTP request.
 
-    <p class="question">Question 2: What is the purpose of request dispatching?</p>
-    <p class="answer">The purpose of request dispatching is to internally pass the request processing to another local resource or to tell
-    client browser to issue another HTTP request to a specific URL.
+            <p class="question">Question 2: What is the purpose of request dispatching?</p>
+            <p class="answer">The purpose of request dispatching is to internally pass the request processing to another local resource or to tell
+                client browser to issue another HTTP request to a specific URL.
 
-    <p class="question">Question 3: What is the difference between redirect and request dispatch?</p>
+            <p class="question">Question 3: What is the difference between redirect and request dispatch?</p>
             <div class="answer">
-    Forward:
-    
-    <ul >
-        <li> Pass the request to another resource on the server. Sometimes referred as "server side redirect".</li>
-        <li> The request and response object passed to the destination servlet.</li>
-        <li> Browser is completely unaware of servlet forward, and hence the the URL will remain unchanged.</li>
-    </ul>
-    Redirect:
-    <ul >
-        <li> Servlet sends HTTP code 3xx to client along with the redirect URL (usually 302 temporary redirect).</li>
-        <li> Client then sends a new request to the URL.</li>
-        <li> extra round trip.</li>
-        <li> only HTTP message sent, the request and response object cannot be sent.</li>
-    </ul>
+                Forward:
 
-        </div>
-    
-    <p class="question">Question 4: What is an attribute ?</p>
-    <div class=answer>
-    An attribute is an object that is used to share information in a web app. Attribute allows servlet to share information
-    among themselves. <br>
-    <p class="answer">An attribute is an object bound into one of three servlet API objects:
-    <u>
-        <li>HTTPServletRequest.</li>
-        <li>HTTPSession.</li>
-        <li>ServletContext.</li>
-    </u>
-    </div>
+                <ul>
+                    <li> Pass the request to another resource on the server. Sometimes referred as "server side redirect".</li>
+                    <li> The request and response object passed to the destination servlet.</li>
+                    <li> Browser is completely unaware of servlet forward, and hence the the URL will remain unchanged.</li>
+                </ul>
+                Redirect:
+                <ul>
+                    <li> Servlet sends HTTP code 3xx to client along with the redirect URL (usually 302 temporary redirect).</li>
+                    <li> Client then sends a new request to the URL.</li>
+                    <li> extra round trip.</li>
+                    <li> only HTTP message sent, the request and response object cannot be sent.</li>
+                </ul>
 
-    
-    <p class="question">Question 5: What is the difference between attributes and parameters?</p>
-    <div class="answer">
-    <ul>
-        <li>
-            Parameter is a name/value pair sent from client to the server - typically, from a HTML form. Parameters can only store
-            String values.
-        </li>
-        <li>
-            An attribute is a server-local storage mechanism. Attributes have String name, but store Object values. Note that
-            attributes are specific to Java, while parameter are platform-independent.
-        </li>
-    </ul>
-    </div>
+            </div>
 
-    <p class="question">Question 6: What are dangers of using attributes?</p>
-    <p class="answer"> Shared by every servlet and every request in the application.
+            <p class="question">Question 4: What is an attribute ?</p>
+            <div class=answer>
+                An attribute is an object that is used to share information in a web app. Attribute allows servlet to share information
+                among themselves. <br>
+                <p class="answer">An attribute is an object bound into one of three servlet API objects:
+                    <u>
+                        <li>HTTPServletRequest.</li>
+                        <li>HTTPSession.</li>
+                        <li>ServletContext.</li>
+                    </u>
+            </div>
 
-    <p class="question">Question 7: What does it mean to say that http is stateless? Give an example of a stateful protocol.</p>
-    <div class="answer">
-    HTTP is a stateless protocol, which means that after a web server responds to a request, there is no "memory" of the
-    request or who sent it.<br>
-    A protocal which requires keeping of the internal state on the server is known as a stateful protocol, example: TCP
-    connection-oriented session.
-</div>
-    
-    <p class="question">Question 8: Give 5 different methods for maintaining state information (count each attribute scope as one method).</p>
-    <div class="answer">
-    <ul>
-        <li>Request scope: destroyed when servlet finishes processing request.</li>
-        <li>Session scope: destroyed when user closes browser.</li>
-        <li>Application scope: destroyed when container stopped.</li>
-        <li>Cookies saved on browser: temporary (deleted when the browser closes), permanent.</li>
-        <li>Hidden field on a form.</li>
-    </ul>
-</div>
-    <p class="question">Question 9: How long does a session last?</p>
-    <div class="answer">
-    There are 3 ways to remove sessions:
-    <ul>
-        <li>session timeout in the DD.</li>
-        <li>using method: session.setMaxInactiveInterval(time)</li>
-        <li>using method: session.invalidate()</li>
-    </ul>
 
-        </div>
-    
-    <p class="question">Question 10: What is a cookie, and how long does a cookie last?</p>
-    <div class="answer">
-    Cookie is small data which is stored on a client side. It is designed to hold a modest amount of data specific to a
-    particular client and website, and can be accessed either by the web server or the client computer. <br>
-    There are two types of cookie:
-    <ul>
-        <li> temporary cookie</li>
-        <li> browser removes when it closes</li>
-        <li> this is default</li>
-        <li> Permanent cookie: a cookie that has a max age set.</li>
-    </ul>
-</div>
-    <p class="question">Question 11: What is the purpose of URL rewriting?</p>
-    <p class="answer">URL rewriting is used to provide shorter and more relevant-looking links to web pages.
+            <p class="question">Question 5: What is the difference between attributes and parameters?</p>
+            <div class="answer">
+                <ul>
+                    <li>
+                        Parameter is a name/value pair sent from client to the server - typically, from a HTML form. Parameters can only store
+                        String values.
+                    </li>
+                    <li>
+                        An attribute is a server-local storage mechanism. Attributes have String name, but store Object values. Note that
+                        attributes are specific to Java, while parameter are platform-independent.
+                    </li>
+                </ul>
+            </div>
 
-    <p class="question">Question 12: Why does the request attribute report "null" for the maintaining state demo?</p>
-    <p class="answer">Because it is destroyed when servlet finishes processing request
+            <p class="question">Question 6: What are dangers of using attributes?</p>
+            <p class="answer"> Shared by every servlet and every request in the application.
+
+            <p class="question">Question 7: What does it mean to say that http is stateless? Give an example of a stateful protocol.</p>
+            <div class="answer">
+                HTTP is a stateless protocol, which means that after a web server responds to a request, there is no "memory" of the
+                request or who sent it.<br>
+                A protocal which requires keeping of the internal state on the server is known as a stateful protocol, example: TCP
+                connection-oriented session.
+            </div>
+
+            <p class="question">Question 8: Give 5 different methods for maintaining state information (count each attribute scope as one method).</p>
+            <div class="answer">
+                <ul>
+                    <li>Request scope: destroyed when servlet finishes processing request.</li>
+                    <li>Session scope: destroyed when user closes browser.</li>
+                    <li>Application scope: destroyed when container stopped.</li>
+                    <li>Cookies saved on browser: temporary (deleted when the browser closes), permanent.</li>
+                    <li>Hidden field on a form.</li>
+                </ul>
+            </div>
+            <p class="question">Question 9: How long does a session last?</p>
+            <div class="answer">
+                There are 3 ways to remove sessions:
+                <ul>
+                    <li>session timeout in the DD.</li>
+                    <li>using method: session.setMaxInactiveInterval(time)</li>
+                    <li>using method: session.invalidate()</li>
+                </ul>
+
+            </div>
+
+            <p class="question">Question 10: What is a cookie, and how long does a cookie last?</p>
+            <div class="answer">
+                Cookie is small data which is stored on a client side. It is designed to hold a modest amount of data specific to a
+                particular client and website, and can be accessed either by the web server or the client computer. <br>
+                There are two types of cookie:
+                <ul>
+                    <li> temporary cookie</li>
+                    <li> browser removes when it closes</li>
+                    <li> this is default</li>
+                    <li> Permanent cookie: a cookie that has a max age set.</li>
+                </ul>
+            </div>
+            <p class="question">Question 11: What is the purpose of URL rewriting?</p>
+            <p class="answer">URL rewriting is used to provide shorter and more relevant-looking links to web pages.
+
+            <p class="question">Question 12: Why does the request attribute report "null" for the maintaining state demo?</p>
+            <p class="answer">Because it is destroyed when servlet finishes processing request
         </fieldset>
-</form>
+    </form>
 </body>
 
 </html>
