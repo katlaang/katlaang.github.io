@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Introduction to Servlets Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <form action="" method="post">
+    <fieldset>
+    <h1>Introduction to Servlets Quiz</h1> <br>
+        <hr>
+  <p class="question">Question 1: What is the difference between a web server and a web container?</p>
+    <p class="answer">Ans: Web Server deals with the http request and response. but the web container deals with the Servlets
+        and their life cycle. Request of any user first comes to the Web Server and then Web Server sends that request to the Web
+        Container.
+    </p>
+
+    <p class="question">Question 2: What is a servlet?</p>
+    <p class="answer"> Ans: Servlet is a java class with capabilities of server which handles requests from the client with
+        the help of Web Container and Web Server. A java class extends HttpServlet. The HttpServlet class provides methods, such as doGet
+        and doPost, for handling HTTP-specific services.
+    </p>
+
+
+    <p class="question"> Question 3: How do web servers and web containers interact with servlets?</p>
+    <p class="answer">Ans: Whenever a user request or want any response. Web server accepts that request and transfer that
+        to Web Container and then Web Container deals with the Servlets life cycle. Example of Web Sever and Web container.
+        Apache is Web Server and Tomcat is the Web container.
+    </p>
+
+
+    <p class="question"> Question 4: Who creates request objects?</p>
+    <p class="answer">Ans:The servlet container locates the servlet, creates request and response objects and passes them to
+        the servlet,and returns to the web server the response stream that the servlet produces.
+    </p>
+
+    <p class="question">Question 5: What are the states in the servlet lifecycle?</p>
+    <p class="answer">Ans: <br>
+                        Step 1: Loading of Servlet.<br>
+                        Step 2: Creating instance of Servlet.<br>
+                        Step 3: Invoking initMethod<br>
+                        Step 4: Invoking Service Method<br>
+                        Step 5: Invoking Destroy method.<br>
+    </p>
+
+
+    <p class="question"> Question 6: Who calls init and when?</p>
+    <p class="answer">Ans: init method is called by the container. It is called when the servlet is first created, and not
+        called again for each user request
+    </p>
+
+    <p class="question"> Question 7: Which of init, service, and doGet should you override?</p>
+    <p class="answer">Ans: We override doGet method.</p>
+
+    <p class="question">Question 8: In what sense are servlets multi-threaded?</p>
+    <p class="answer">Ans:There is no such interface as MultiThreadedModel. Servlets are intrinsically multithreaded. This
+        means a single instance can be accessed by more than one thread.
+    </p>
+
+    <p class="question">Question 9: What are the implications of this for servlet instance variables?</p>
+    <p class="answer">Ans: Servlet instance variables should implement appropriate concurrency.</p>
+        </fieldset>
+</form>
+</body>
+</html>
