@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JSP Introduction Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+    <form action="" method="post">
+        <fieldset>
+            <h1 class="title">JSP Introduction Quiz</h1>
+            <br>
+            <h4>(The answers are highlighted &#128512;)</h4>
+            <hr>
+
+            <p class="question">
+                Question 1: What is the main value of Java Server Pages?
+            </p>
+            <div class="answer">
+                <p> JSP separates display from processing, i.e., separate html from java. JSP is html with a little java mixed
+                    in.
+                </p>
+            </div>
+
+            <p class="question">
+                Question 2: How are JSP pages related to servlets?
+            </p>
+
+            <div class="answer">
+                Server converts the JSP into a servlet class that implements the javax.servlet.jsp.JspPage interface. The JSP file is
+                compiled only when the page is first requested, or when the JSP file has been updated and has a more recent timestamp.
+            </div>
+
+            <p class="question">
+                Question 3: How are JSP pages related to HTML?
+            </p>
+
+            <div class="answer">
+                JSP already contains HTML which means JSP allows us to include HTML.
+            </div>
+
+            <p class="question">
+                Question 4: Give an example of a JSP scriptlet and show how it will look in the JSP servlet .
+
+            </p>
+            <div class="answer">
+                <% int value = 10; %></%>
+                It will be considered as local variable in the service method. The JSP scriplet tag can only be used to declare variables and not methods. The declaration of scriptlet tag is placed inside the _jspService() method.
+            </div>
+
+            <p class="question">
+                Question 5. Give an example of a JSP declaration and show how it will look in the JSP servlet.
+
+            </p>
+            <div class="answer">
+                <%! data value = 50; %></%!><br>
+                It will be considered as globel variable in the class. A declaration tag can be used to declare variables as well as methods, and is placed outside of the _jspService() method.
+            </div>
+
+            <p class="question">
+                Question 6. Give an example of a JSP comment and show how it will look in the JSP servlet.
+
+            </p>
+            <div class="answer">
+                <%-- This is a JSP comment --%></%-->
+            </div>
+
+            <p class="question">
+                Question 7. Give an example of a JSP expression and show how it will look in the JSP servlet.
+            </p>
+
+            <div class="answer">
+                Current Time: <%= java.util.Calendar.getInstance().getTime() %> </%>
+            </div>
+
+            <p class="question">
+                Question 8. Give an example of a JSP directive and show how it will look in the JSP servlet.
+            </p>
+            <div class="answer">
+                <%@page import="java.util.*" %></%@page>
+                </div>
+
+                <p class="question">
+                    Question 9. Explain how an EL expression is evaluated.
+                </p>
+                <div class="answer">
+                    The JSP implementation evaluates the EL expression, converts it, and passes the returned value to the tag
+                    handler.<br>
+                    ${something} - container evaluates this as follows<br>
+                    When the JSP compiler sees the ${} form in an attribute, it generates code to evaluate the expression and substitues the value of expresson.It will check in the all the scope respectively page, request, session, application. If it not found it will be ignored.
+                    </div>
+
+                    <p class="question">Question 10. Explain how servlet attributes are involved in EL expressions</p>
+                    <div class="answer">
+                        There is four types of scopes. EL expressions are involved in four scopes.<br>
+                        1- Page Scope.It helps in getting the attribute stored in Page scope<br>
+                        2- Request Scope.It used for getting the attributes from request scope. The attribute which are set by request implicit object.<br>
+                        3- Session Scope. Fetches attributes from session scope, set by session object.<br>
+                        4- Application Scope.Used for getting Applicaton level attributes. <br>
+                        </div>
+
+                        <p class="question">
+                            Question 11: Explain how servlets and JSPs use request dispatch to interact.
+                        </p>
+                        <div class="answer">
+                            We use dispatch to send data as request and response to other jsp.
+                            The RequestDispatcher interface provides two methods:<br>
+                            1. public void forward: Forwards a request from a servlet to another source like a jsp.<br>
+                            2. public void include: includes the content of a resource<br>
+
+                        </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
