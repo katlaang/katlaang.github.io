@@ -83,37 +83,37 @@
             </p>
             <div class="answer">
                 <%@page import="java.util.*" %></%@page>
-                </div>
+            </div>
 
-                <p class="question">
-                    Question 9. Explain how an EL expression is evaluated.
-                </p>
-                <div class="answer">
-                    The JSP implementation evaluates the EL expression, converts it, and passes the returned value to the tag
-                    handler.<br>
-                    ${something} - container evaluates this as follows<br>
-                    When the JSP compiler sees the ${} form in an attribute, it generates code to evaluate the expression and substitues the value of expresson.It will check in the all the scope respectively page, request, session, application. If it not found it will be ignored.
-                    </div>
+            <p class="question">
+                Question 9. Explain how an EL expression is evaluated.
+            </p>
+            <div class="answer">
+                The JSP implementation evaluates the EL expression, converts it, and passes the returned value to the tag
+                handler.<br>
+                ${something} - container evaluates this as follows<br>
+                When the JSP compiler sees the ${} form in an attribute, it generates code to evaluate the expression and substitues the value of expresson.It will check in the all the scope respectively page, request, session, application. If it not found it will be ignored.
+            </div>
 
-                    <p class="question">Question 10. Explain how servlet attributes are involved in EL expressions</p>
-                    <div class="answer">
-                        There is four types of scopes. EL expressions are involved in four scopes.<br>
-                        1- Page Scope.It helps in getting the attribute stored in Page scope<br>
-                        2- Request Scope.It used for getting the attributes from request scope. The attribute which are set by request implicit object.<br>
-                        3- Session Scope. Fetches attributes from session scope, set by session object.<br>
-                        4- Application Scope.Used for getting Applicaton level attributes. <br>
-                        </div>
+            <p class="question">Question 10. Explain how servlet attributes are involved in EL expressions</p>
+            <div class="answer">
+                There is four types of scopes. EL expressions are involved in four scopes.<br>
+                1- Page Scope.It helps in getting the attribute stored in Page scope<br>
+                2- Request Scope.It used for getting the attributes from request scope. The attribute which are set by request implicit object.<br>
+                3- Session Scope. Fetches attributes from session scope, set by session object.<br>
+                4- Application Scope.Used for getting Applicaton level attributes. <br>
+            </div>
 
-                        <p class="question">
-                            Question 11: Explain how servlets and JSPs use request dispatch to interact.
-                        </p>
-                        <div class="answer">
-                            We use dispatch to send data as request and response to other jsp.
-                            The RequestDispatcher interface provides two methods:<br>
-                            1. public void forward: Forwards a request from a servlet to another source like a jsp.<br>
-                            2. public void include: includes the content of a resource<br>
+            <p class="question">
+                Question 11: Explain how servlets and JSPs use request dispatch to interact.
+            </p>
+            <div class="answer">
+                We use dispatch to send data as request and response to other jsp.
+                The RequestDispatcher interface provides two methods:<br>
+                1. public void forward: Forwards a request from a servlet to another source like a jsp.<br>
+                2. public void include: includes the content of a resource<br>
 
-                        </div>
+            </div>
         </fieldset>
     </form>
 </body>

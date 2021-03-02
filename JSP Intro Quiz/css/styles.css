@@ -1,26 +1,28 @@
-body{
-    background-color:aliceblue;
+body {
+    background-color: black;
     font-size: 18px;
-    
-}
-fieldset{
-    border-radius: 20px;
-     border: 5px solid grey;
-    width: 1200px;
-  margin:auto;
-    
+
 }
 
-    
-.answer{
+fieldset {
+    border-radius: 20px;
+    border: 5px solid grey;
+    width: 1200px;
+    margin: auto;
+    background-color: aliceblue;
+
+}
+
+
+.answer {
     background-color: lightgrey;
     width: 1200px;
 }
 
-h1{
+h1 {
     text-align: center;
 }
-h4{
-   text-align: center; 
-}
 
+h4 {
+    text-align: center;
+}
