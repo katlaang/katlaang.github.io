@@ -11,6 +11,7 @@ fieldset {
 
 }
 
-p.answer {
-    background-color: #E8E8E8;
-}
+p.answer 
+    color: red;
+
+
