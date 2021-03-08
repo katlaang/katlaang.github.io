@@ -1,0 +1,44 @@
+
+body {
+    background-color:dimgrey;
+}
+html, body {
+  display:flex; flex-direction:column; 
+  justify-content:center;
+  min-height:100vh;
+}
+body, input, button {
+    font-family: "Century Gothic",sans-serif;
+    font-size: 20pt;
+}
+div {
+    margin: 0.5em;
+}
+
+.container { 
+    margin: auto;
+    width: 800px;
+    border: 10px solid #ccc !important;
+    border-radius: 25px;
+    background-color: darkslategray;
+}
+
+span {
+    color: aliceblue;
+}
+
+
+img {
+    background: darkslategray;
+    margin: none;
+    padding: none;
+}
+
+.calculator-container {
+    text-align: center;
+}
+
+.input {
+    text-align: justify;
+        margin-left: 20%;
+}
