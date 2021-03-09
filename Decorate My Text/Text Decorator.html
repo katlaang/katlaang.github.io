@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://mumstudents.org/cs472/2021-03-BL/Labs/6/decoratemytext.html -->
+<html lang="en">
+	<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Text Decorator</title>
+		<link href="./Text Decorator_files/decoratemytext.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		
+		<!-- link to your script file here -->
+		
+	</head>
+
+	<body>
+        <fieldset>
+        <div id="container">
+		<h1>Text Decorator</h1>
+		
+		<div>
+			<img src="./images/decorated.gif" alt="very decorated!">
+		</div>
+
+		<!-- Your UI controls go here -->
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id="txtDeco" rows="4" cols="30"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Decoration</legend>
+			<button type="button" id="biggerdeco" onclick="doInterval()">Bigger Decorations!</button><br><br>
+            <button type="button" id="pigLatin" onclick="pigLatin()">Pig Latin!</button><br><br>
+            <button type="button" id="malkovitch" onclick="malkovitch()">Malkovitch!</button><br><br>
+            <label for="bling">Bling</label>
+			<input type="checkbox" name="bling" value="Bling" id="checkbling" onChange="bold()">
+            <br><br>
+            <label for="centralize">Centralize</label>
+			<input type="checkbox" name="centralize" id="centralize" onChange="centralize()">
+		</fieldset>
+        </div>
+        </fieldset>
+		<script src="./js/decoratemytext.js"></script>
+</body
+></html>
