@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <div id="content">
+        <h1 class="title">
+            Javascript Exercise
+        </h1>
+
+        <p class="question">
+            1. What is the difference between the following 2 statements? </p>
+            <code>
+                setTimeout(booyah, 2000);<br>
+                setTimeout(booyah(), 2000);
+            </code>
+       
+        <p class="answer">Answer:</p> 
+        <p>
+            - setTimeout(booyah, 2000); -> call booyah function  after 2000 milliseconds. <br>
+            - setTimeout(booyah(), 2000); -> it calls the function immediately, rather than waiting the 2000ms!
+        </p>
+        <hr>
+
+
+        <p class="question"> 2. What do the following 2 alerts display (answer without running the code)?</p>
+        <p>
+            <pre>
+                var myfunc = function(a, x) {
+                    return a * x;
+                };
+                var x = myfunc(2, 3);
+                var y = myfunc;
+                alert(x);
+                alert(y(2,3)); 
+            </pre>
+        
+        <p class="answer">Answer:</p> 
+        <p> It will display 6 twice </p>
+        <hr>
+
+        <p class="question">3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!” </p>
+        <code>
+            setTimeout(booyah1, 2000); <br>
+            setTimeout(booyah2(), 2000); 
+        </code>
+        <p class="answer">Answer:</p> 
+        <p>
+            <pre>
+                function onClick(){
+                    setTimeout(booyah1, 2000);	
+                }
+                function booyah1(){
+                    alert("BOOYAH!");
+                }
+            </pre>
+        
+        <p>
+            <pre>
+            
+                function onClick(){
+                    setTimeout(booyah2(), 2000);
+                }
+                function booyah2(){
+                    setTimeout(booyah3, 2000);
+                }
+                function booyah3(){
+                    alert("BOOYAH!");
+                }
+            
+            </pre>
+        
+        <hr>
+
+        <p class="question">4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)?
+        The purpose of request dispatching is to internally pass the request processing to another local resource or to tell
+        client browser to issue another HTTP request to a specific URL.</p>
+        <p class="answer">Answer:</p>
+        <p>
+            To separate JavaScript from HTML markup, as well as keeping modules of JavaScript independent of other modules. All content should be available without all or any of the JavaScript running successfully.
+            Unobtrusive JavaScript should not degrade the accessibility of the HTML, and ideally should improve it, whether the user has personal disabilities or are using an unusual, or unusually configured, browser.
+        </p> 
+        
+    </div>
+</body>
+</html>
