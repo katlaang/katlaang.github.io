@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="referrer" content="origin-when-cross-origin">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    
+
 
     <title>Rudy Timer</title>
 
@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <button onclick="rudyTimer();">Click me!</button>
-    <span id="output"></span>
+   
+
     <script>
-        
         var rudyTimer = (function() {
+            "use strict";
             var timer = null;
             if (timer == null) {
-                setInterval(rudyTimer, 1000)
+                setInterval(rudyTimer(), 1000)
             } else {
                 clearInterval(timer);
                 timer = null;
@@ -35,6 +35,8 @@
 
     </script>
 
+ <button onclick="rudyTimer();">Click me!</button>
+    <span id="output"></span>
 
 </body>
 
