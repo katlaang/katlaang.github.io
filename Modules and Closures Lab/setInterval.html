@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+
+    <title>Rudy Timer</title>
+
+
+</head>
+
+<body>
+   
+
+    <script>
+        var rudyTimer = (function() {
+            "use strict";
+            var timer = null;
+            if (timer == null) {
+                setInterval(rudyTimer(), 1000)
+            } else {
+                clearInterval(timer);
+                timer = null;
+            }
+
+
+        })();
+
+        function rudyTimer() {
+            document.getElementById("output").innerHTML += " Rudy!";
+        }
+
+    </script>
+
+ <button onclick="rudyTimer();">Click me!</button>
+    <span id="output"></span>
+
+</body>
+
+</html>
