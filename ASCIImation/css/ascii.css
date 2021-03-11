@@ -1,0 +1,37 @@
+body {
+    background-color:  #CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+button, select, option{
+    font-weight:bold;
+}
+
+.h1 {
+    font-size 32pt;
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    height: 400px;
+    font-size: 12pt;
+    font-weight: bold;
+    
+}
+
+.controls {
+    border: 5px solid black;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+#validation {
+    margin-top: 50px;
+    right: 5px;
+    float: right;
+}
