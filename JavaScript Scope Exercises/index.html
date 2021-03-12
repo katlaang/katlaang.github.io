@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Scope Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+    <fieldset class="field">
+        <h1>Javascript Scope Exercises</h1>
+        <br>
+        <hr>
+        <div class="question"></div>
+        1. Determine what this Javascript code will print out (without running it):
+        <pre class="code">
+        x = 1;
+        var a = 5;
+        var b = 10;
+        var c = function(a, b, c) {
+                                    var x = 10;
+                                    document.write(x);
+                                    document.write(a);
+                                    var f = function(a, b, c) {
+                                                                b = a;
+                                                                document.write(b);
+                                                                b = c;
+                                                                var x = 5;
+                                                        }
+                                f(a,b,c);
+                                document.write(b);
+                            }
+        c(8,9,10);
+        document.write(b);
+        document.write(x);
+        }
+        
+        
+       </pre>
+
+        <div class="answer">
+            10889101
+
+        </div>
+        <div class="question">
+            2. What is the difference between a method and function?
+        </div>
+        <div class="answer">
+            A function is a block of code that performs a specific task or tasks. It is defined using the <strong>function</strong> keyword and enclosed in curly brackets. <br> <br>
+            A method is a property of an object containing a definition of a function. i.e methods are functions stored as objects.
+
+        </div>
+        <div class="question">
+            3. What does 'this' refer to when used in a Java method?
+        </div>
+        <div class="answer">
+            <strong>this</strong> refers to the current object in a method or constructor.
+        </div>
+        <div class="question">
+            4. What does 'this' refer to when used in a JavaScript method?
+        </div>
+        <div class="answer">
+            <strong>this</strong> refers to the owner of the created object
+        </div>
+        <div class="question">
+            5. What does 'this' refer to when used in a JavaScript constructor function?
+        </div>
+        <div class="answer">
+            In a constructor function <strong>this</strong> does not have a value. It is a substitute for the new object. The value of <strong>this</strong> will become the new object when a new object is created.
+        </div>
+        <div class="question">
+            6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
+            When f is called by x.f( ), what does 'this' refer to?
+        </div>
+        <div class="answer">
+            <strong>this</strong>  will refer to x 
+        </div>
+        <div class="question">
+            7. What is a free variable in JavaScript?
+        </div>
+        <div class="answer">
+            Free variables are variables that are not declared locally or passed as parameters. e.g
+            <pre>
+
+            function numberGenerator() {
+                // Local “free” variable that ends up within the closure
+                var num = 1;
+                function checkNumber() { 
+                    console.log(num);
+                    }
+            num++;
+            return checkNumber;
+            }
+
+            var number = numberGenerator();
+            number(); // 2
+            
+            </pre>
+
+        </div>
+        <div class="question">
+            8. Create an object that has properties with name = "fred" and major="music" and a property that is a function that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+        </div>
+        <div class="answer">
+            <pre>
+            var object={
+                name: "fred",
+                major: "music",
+                smallestNo: function(num1, num2){
+                            if(num1 &lt; num2){
+                                return num1;
+                            }else if(num1===num2){
+                                return num1*num2;
+                            }else
+                                return num2;
+                }
+            }
+            
+            </pre>
+        </div>
+        <div class="question">
+            9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.
+            Employee objects have the following fields: name, salary, position.
+        </div>
+        <div class="answer">
+            <pre>
+        function Employee(name, salary, position){
+                 this.name = name;
+                 this.salary = salary;
+                 this.position = position;
+        }
+
+        var employee1 = new Employee("Eunice", 6000, "Business Manager");
+        var emplyee2 = new Employee("Teemu", 5000, "Full Stack Developer");
+        var emplyee3 = new Employee("Yngwe", 1000, "Investor");
+            
+            </pre>
+        </div>
+        <div class="question">
+            10. Write a Javascript function that takes any number of input arguments and returns the product of the arguments.
+        </div>
+        <div class="answer">
+            <pre>
+
+            function product() {
+                var products = 1;
+                for (i = 0; i &lt; arguments.length; i++) {
+                    products = products*arguments[i];
+                }
+                return products
+                }
+                
+            </pre>
+
+        </div>
+        <div class="question">
+            11. Write an arrow function that returns the maximum of its three input arguments
+        </div>
+        <div class="answer">
+            var maxNumber = (num1, num2, num3) => Math.max(num1,num2, num3);
+        </div>
+    </fieldset>
+        </div>
+</body>
+
+</html>

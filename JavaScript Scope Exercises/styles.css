@@ -1,0 +1,48 @@
+body {
+    background-color: #3f0000;
+    font-size: 14px;
+    line-height: 150%;
+    font-family: sans-serif;
+     line-height: 120%;
+    
+    
+  
+
+}
+
+.field {
+    border-radius: 20px;
+    border: 5px solid grey;
+    display: inline-block;
+   
+    width: 1200px;
+    margin: 30px 20px 20px 80px;
+    height: auto;
+    text-align: centre;
+    background-color:#d9d9ff;
+
+}
+
+
+.answer {
+    background-color: lightgrey;
+    
+    font-weight: bold;
+    color: darkblue;
+      margin: 12px;
+     line-height: 120%;
+    text-justify: auto;
+}
+
+h1 {
+    text-align: center;
+}
+strong{
+    font-style: italic;
+    color: red;
+}
+
+
+.code{
+    line-height: 90%;
+}
