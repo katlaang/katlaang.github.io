@@ -16,20 +16,16 @@ var  boundarycross =
 function () {
     if(!crossed && started) { //only set you lose if we have started and haven't crossed yet
     $(".boundary").addClass("youlose");
+        $("#status").text("Game Over!");
         crossed = true;
+        started=false;
     }
 };
 
 var win =
     function () {
-        if(started) { //only resolve the game if we have started
-            if(!crossed) {
+        if(started && !crossed) { //only resolve the game if we have started
                 $("#status").text("You win");
-            }
-            else
-            {
-                $("#status").text("You lose");
-            }
         started = false; //end the game
         }
     };
