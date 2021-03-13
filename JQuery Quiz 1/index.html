@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Scope Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <fieldset class="field">
+        <h1>jQuery Quiz 1</h1>
+        <br>
+        <hr>
+        <div class="question">
+            1. In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”?
+        </div>
+        <br>
+        <div class="answer">
+            A jQuery function lets you select HTML elements using css selectors. When you call the function and pass a selector to it, it creates a new jQuery object matching all the elements that match the selector.<br>
+            A jQuery object has properties and methods on it,collects and wraps the DOM elements so they can be manipulated.
+
+        </div>
+        <div class="question">
+            2. Write jQuery code to find all h1 elements that are children of a div element and make their background
+            color red.
+            Sample HTML:
+            <pre>
+            
+           &lt;body&gt;
+           &lt;h1&gt;abc&lt;/h1&gt;&lt;br&gt;&lt;div&gt;
+                &lt;h1&gt;div-1&lt;/h1&gt;
+                &lt;h1&gt;div-2&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;h1&gt;xyz&lt;/h1&gt;
+                &lt;/body&gt;
+        </pre>
+        </div>
+        <div class="answer">
+            <pre><code>
+            $("div h1").css("background-color","red");
+            
+        </code></pre>
+        </div>
+        <div class="question">
+            3. Use a jQuery method to insert the text "YES!" at the end of the &lt;p&gt; element.
+            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;script&gt;
+                    &lt; !-—INSERT YOUR JQUERY CODE HERE --&gt;
+                        <pre>
+                        <code>$("p").append("YES!)   </code></pre> 
+                &lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;Is jQuery FUN or what? &gt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            
+           </pre>
+        </div>
+
+
+    </fieldset>
+</body>
+
+</html>
