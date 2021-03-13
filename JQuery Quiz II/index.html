@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Quiz II</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    
+
+</head>
+
+<body>
+    <fieldset>
+        <h1>JQuery Quiz II </h1>
+        <br>
+        <hr>
+        <br>
+        <div class="question">
+
+            1. Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if
+            they are. Explain why they can have different parameters and be equivalent, if they are equivalent.
+            <pre>
+    <code>
+            //code fragment 1
+            $("li").each(function(idx, e) {
+                $(e).css(“color”, “yellow”); });
+            <br>
+            //code fragment 2
+            $("li").each(function() {
+                $(this).css(“color”, “yellow”); });
+                <br>
+            //code fragment 3
+            $("li").each(function(idx) {
+                $(this).css(“color”, “yellow”); });
+                <br>
+</code>
+</pre>
+        </div>
+
+        <div class="answer">
+            All the three code snipets do the same thing.
+            <ul>
+                <li>For fragment 1, the parameters are the index and current DOM object "e".</li>
+                <li>For the fragment 2, $(this) is equivalent to the current DOM object, like "e" in fragment 1.</li>
+                <li>For the fragment 3, $(this) is equivalent to the current DOM object, like "e" in fragment 1. But
+                    "idx" is not used.</li>
+
+            </ul>
+
+
+        </div>
+
+        <div class="question">
+
+            Write a jQuery expression to find all divs on a page that include an unordered list in them, and make
+            their text color be blue.
+            <pre class="snipets">
+                        &lt;div&gt;no ul here &lt;/div&gt;
+                        &lt;div&gt;
+                                This does contain a ul.
+                            &lt;ul&gt;
+                                 &lt;li>the first item&lt;/li&gt;
+                                 &lt;li>the second item&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;script&gt;
+                            &lt; !—INSERT YOUR JQUERY CODE HERE - - &gt;
+                            <div class="answer"><pre>
+                         $("div").has("ul").css("color", "blue"); </pre></div>  
+                     &lt;/script&gt;
+                        &lt;/body&gt;</pre>
+        
+        </div>
+
+
+        <div class="question">
+
+            Write jQuery code to append the following div element (and all of its contents) dynamically to the body
+            element.
+            <pre class="sniptes">
+        &lt;div&gt; &lt;h1&gt; JQuery Core &lt;/h1&gt;
+        HTML:
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;JS Bin&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;
+        
+    </pre>
+        </div>
+
+        <div class="answer">
+            <pre><code>
+         &lt; !—INSERT YOUR JQUERY CODE HERE - - &gt;
+
+        $("body").append("&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;");
+
+
+            </code></pre>
+
+
+        </div>
+
+    </fieldset>
+</body>
+
+</html>
