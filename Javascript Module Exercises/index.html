@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Module Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <h1>JS Module Exercises</h1>
+        <br>
+        <hr>
+        <br>
+        <div class="question">
+            1. Determine what this Javascript code will print out (without running it):
+            <pre><code>
+            x = 1;
+            var a = 5;
+            var b = 10;
+            var c = function(a, b, c) {
+                            document.write(x);
+                            document.write(a);
+                            var f = function(a, b, c) {
+                                            b = a;
+                                            document.write(b);
+                                            b = c;
+                                            var x = 5;
+                                    }
+                            f(a,b,c);
+                            document.write(b);
+                            var x = 10;
+                    }
+            c(8,9,10);
+            document.write(b);
+            document.write(x);
+            
+            </code></pre>
+        </div>
+        <div class="answer">
+            undefined 8 8 9 10 1
+        </div>
+        <div class="question">
+            2. Define Global Scope and Local Scope in Javascript.
+        </div>
+        <div class="answer">
+            <dl>
+                <dt> Global Scope:</dt>
+                <dd>This is where any variable that is not declared inside any function or block resides.It can be accessed by any function and script on a web page.
+                    e.g:
+                    <pre><code>
+                            // Global Scope
+                            function someFunction() {
+                            // Local Scope #1
+                            function someOtherFunction() {
+                            // Local Scope #2
+                            }
+                            }
+                            
+                            // Global Scope
+                            function anotherFunction() {
+                            // Local Scope #3
+                            }
+                            // Global Scope
+                            </code></pre>
+
+
+
+                </dd>
+                <dt>Local Scope:</dt>
+                <dd>Any variable declared inside a function belongs to the local scope. Variables are bound to their respective functions and not available to other functions. See example above. </dd>
+
+
+            </dl>
+
+        </div>
+        <div class="question">
+            3. Consider the following structure of Javascript code:
+            <pre>
+            // Scope A
+            function XFunc () {
+            // Scope B
+            function YFunc () {
+            // Scope C
+            };
+            };
+            </pre>
+            <ol type="a">
+                <li>Do statements in Scope A have access to variables defined in Scope B and C?</li>
+                <div class="answer">
+                    No. Scope B and C are local variables whereas A is global.
+                </div>
+                <li>Do statements in Scope B have access to variables defined in Scope A?</li>
+                <div class="answer">
+                    Yes. Variables in global scope(A) will be available in scope B and C.
+                </div>
+                <li>Do statements in Scope B have access to variables defined in Scope C?</li>
+                <div class="answer">
+                    No. Scope C is a local scope to function YFunc
+                </div>
+                <li>Do statements in Scope C have access to variables defined in Scope A?</li>
+                <div class="answer">
+                    Yes. A is global scope.
+                </div>
+                <li>Do statements in Scope C have access to variables defined in Scope B?</li>
+                Yes. Scope C is part of scope B and YFunc can access variables local to scope B.
+            </ol>
+        </div>
+
+        <div class="question">
+            4. What will be printed by the following (answer without running it)?
+            <pre>
+            var x = 9;
+            function myFunction() {
+            return x * x;
+            }
+            document.write(myFunction());
+            x = 5;
+            document.write(myFunction());
+            </pre>
+        </div>
+        <div class="answer">
+            81 25
+        </div>
+        <div class="question">
+            5.
+            <pre>
+            var foo = 1;
+            function bar() {
+            if (!foo) {
+            var foo = 10;
+            }
+            alert(foo);
+            }
+            bar();
+            </pre>
+            What will the alert print out? (Answer without running the code. Remember ‘hoisting’.)?
+        </div>
+        <div class="answer">
+            10
+        </div>
+        <div class="question">
+            6. Consider the following definition of an add( ) function to increment a counter variable:
+            <pre>
+            var add = (function () {
+            var counter = 0;
+            return function () {
+            return counter += 1;
+            }
+            })();
+            </pre>
+            Modify the above module to define a count object with two methods: add( ) and reset( ). The count.add( ) method
+            adds one to the counter (as above). The count.reset( ) method sets the counter to 0.
+        </div>
+        <div class="answer">
+            <pre><code> 
+            
+            var count=(function(){
+            var counter=0;
+            return{
+                add:function(){
+                return counter+=1;
+                }
+                reset: function(){
+                return counter=0;
+                }
+            }
+            
+            });
+            </code></pre>
+        </div>
+        <div class="question">
+            7. In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a function closure,
+            what is a "free" variable?
+        </div>
+        <div class="answer">
+            In question 6, the free variable is <strong>counter</strong>. <br>
+            Free variables are simply the variables that are neither locally declared nor passed as parameter. In javascript closures, like the one in question 6, those are simply the variables that the function takes (read and write) in the enclosing scope where it is declared or from a parent scope.
+
+        </div>
+        <div class="question">
+            8. The add( ) function defined in question 6 always adds 1 to the counter each time it is called. Write a definition of a function make_adder(inc), whose return value is an add function with increment value inc (instead of 1). Here
+            is an example of using this function:
+            <pre>
+            add5 = make_adder(5);
+            add5( ); add5( ); add5( ); // final counter value is 15
+            add7 = make_adder(7);
+            add7( ); add7( ); add7( ); // final counter value is 21
+            </pre>
+        </div>
+        <div class="answer">
+            <pre><code>
+            var make_adder=(function(inc){
+            var counter=0;
+            return function(){
+            return counter+=inc;
+            }
+            });
+            </code></pre>
+        </div>
+        <div class="question">
+            9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of
+            these function and variable names will be added to the Global Javascript namespace. What simple modification to
+            the Javascript file can remove all the names from the Global namespace?
+
+        </div>
+        <div class="answer">
+            For small projects, it will be perfectly fine to put these variables into a closure and expose then externaly from there. This comes in terms of an IIFE - immedately invoked function expression.With these builing blocks:<br>
+            <blockquote>
+                -a closure to preserve a private space<br>
+                -a function, which is immediately invoked
+            </blockquote>
+            e.g
+            <pre><code>
+            (function() {
+                // Your code here
+
+                // Expose to global
+                    window['varName'] = varName;
+            })();
+            
+            </code></pre>
+            In bigger projects, it is better to split the code into separate modules with separate closures and then connect them.
+        </div>
+        <div class="question">
+            10. Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object
+            with the following fields and methods:
+            <pre>
+            Private Field: name
+            Private Field: age
+            Private Field: salary
+            Public Method: setAge(newAge)
+            Public Method: setSalary(newSalary)
+            Public Method: setName(newName)
+            Private Method: getAge( )
+            Private Method: getSalary( )
+            Private Method: getName( )
+            Public Method: increaseSalary(percentage) // uses private getSalary( )
+            Public Method: incrementAge( ) // uses private getAge( )
+            </pre>
+        </div>
+        <div class="answer">
+            <pre><code>
+            var employee=(() =>{
+            //private variables:
+                let name;
+                let age;
+                let salary;
+                
+                //public methods
+                var setAge= (newAge) =>age= newAge;
+                var setSalary=(newSalary)=>salary=newSalary;
+                var setName=(newName)=>name=newName;
+                
+                //private method
+                let getAge =>return age;
+                let getSalary=> return salary;
+                let getName=> return name;
+                
+                //public methods
+                
+                var increaseSalary=(percentage)=>return getSalary()*(1+(percentage/100));
+                var incrementAge=()=>return getAge()+1;
+                
+                //variables and functions that we would like to expose
+                return{
+                setAge: setAge,
+                setSalary: SetSalary,
+                setName:setName,
+                increaseSalary:increaseSalary,
+                incrementAge:incrementAge
+                }; 
+            })();
+            
+            
+            </code></pre>
+        </div>
+        <div class="question">
+            11. Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern.
+        </div>
+        <div class="answer">
+            <pre><code>
+            
+            var employee=(() =>{
+            //private variables:
+                let name;
+                let age;
+                let salary;
+                
+                //private method
+                let getAge =>return age;
+                let getSalary=> return salary;
+                let getName=> return name;
+                
+                return{
+                 setAge:function(newAge) {
+                 age= newAge;
+                 },
+                 setSalary:function(newSalary){
+                 salary=newSalary;
+                 },
+                 setName:function(newName){
+                 name=newName;
+                },
+                 increaseSalary:function(percentage){
+                 return getSalary()*(1+(percentage/100));
+                 },
+                incrementAge:function(){
+                return getAge()+1;
+                }
+                };
+                })();
+            </code></pre>
+        </div>
+        <div class="question">
+            12. Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
+        </div>
+        <div class="answer">
+            <pre><code>   
+            
+                var employee=(() =>{
+            //private variables:
+                var name;
+                var age;
+                var salary;
+                
+                //private method
+                var getAge =>return age;
+                var getSalary=> return salary;
+                var getName=> return name;
+                
+                var employeeObject={
+                setAge:function(newAge) {
+                 age= newAge;
+                 },
+                 setSalary:function(newSalary){
+                 salary=newSalary;
+                 },
+                 setName:function(newName){
+                 name=newName;
+                },
+                 increaseSalary:function(percentage){
+                 return getSalary()*(1+(percentage/100));
+                 },
+                incrementAge:function(){
+                return getAge()+1;
+                }
+                };
+                return EmployeeObject;
+                
+                })();
+                
+                
+                
+                
+                
+                </code></pre>
+        </div>
+        <div class="question">
+            13. Write a few Javascript instructions to extend the Module of Question 10 to have a public address field and
+            public methods setAddress(newAddress) and getAddress( ).
+        </div>
+        <div class="answer">
+            <pre><code>
+            
+                employee.address;
+
+                employee.setAddress = function(newAddress){
+                    return address = newAddress;
+                };
+
+                employee.getAddress = function(){
+                    return address;
+                }
+            
+            </code></pre>
+
+        </div>
+        <div class="question">
+            14. What is the output of the following code?
+            <pre>
+            const promise = new Promise((resolve, reject) => {
+            reject(“Hattori”);
+            });
+            promise.then(val => alert(“Success: “ + val))
+            .catch(e => alert(“Error: “ + e));
+            </pre>
+        </div>
+        <div class="answer">
+            It is going to show an alert with the following message: <q>Error: Hattori</q>
+        </div>
+        <div class="question">
+            15. What is the output of the following code?
+            <pre>
+            const promise = new Promise((resolve, reject) => {
+            resolve(“Hattori”);
+            setTimeout(()=> reject(“Yoshi”), 500);
+            });
+            promise.then(val => alert(“Success: “ + val))
+            .catch(e => alert(“Error: “ + e));
+            </pre>
+        </div>
+        <div class="answer">
+            It is going to just show an alert with the following message: <q>Success: Hattori</q>
+        </div>
+        <div class="question">
+            16. What is the output of the following code?
+            <pre>
+            function job(state) {
+            return new Promise(function(resolve, reject) {
+            if (state) {
+            resolve('success');
+            } else {
+            reject('error');
+            }
+            });
+            }
+            let promise = job(true);
+            promise.then(function(data) {
+            console.log(data);
+            return job(false);})
+            .catch(function(error) {
+            console.log(error);
+            return 'Error caught';
+            });
+            </pre>
+        </div>
+        <div class="answer">
+             It is going to log <q>success</q> and then <q>error</q>.
+        </div>
+    </fieldset>
+
+</body>
+
+</html>
