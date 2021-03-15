@@ -20,7 +20,7 @@
             div.className = "puzzlepiece";
             div.style.left = x + 'px';
             div.style.top = y + 'px';
-            div.style.backgroundImage = 'url("background.jpg")';
+            div.style.backgroundImage = 'url("images/background.jpg")';
             div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
 
             // store x and y for later
