@@ -2,8 +2,7 @@ body{
       background: linear-gradient(to bottom, #000428, #004e92);
       font-size: 16px;
       margin: 0;
-    width: 100vw;
-    height: 100vh;
+   
 }
 fieldset{
     width: 70%;
@@ -12,7 +11,9 @@ fieldset{
     overflow: hidden;
     border:2px;
     border-radius: 2px;
-    margin: 30px 10px 30px 200px;
+    overflow: hidden;
+    margin: 30px 10px 50px 200px;
+    margin-bottom: 100px;
 }
 .answer{
     color: rgb(28, 28, 80);
