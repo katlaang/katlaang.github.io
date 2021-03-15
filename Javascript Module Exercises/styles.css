@@ -1,0 +1,42 @@
+body{
+     background: linear-gradient(to bottom, #000428, #004e92);
+      font-size: 16px;
+      margin: 50px;  
+}
+fieldset{
+    width: 70%;
+    background-color: grey;
+   
+    margin: 30px 10px 50px 200px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border: 2px;
+    border-radius: 4px;
+     line-height: 150%;
+}
+.answer{
+    color: rgb(28, 28, 80);
+    background-color:lightgray;
+    margin: 6px;
+    padding: 10px;
+    border-radius: 4px;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 30px;
+    background-color: lightgray;
+    border-radius: 4px;
+}
+hr{
+    color: aliceblue;
+    background-color: lightgray;
+}
+pre{
+    font-size: 12px;
+    
+}
+.last{
+    margin-bottom: 50px;
+}
