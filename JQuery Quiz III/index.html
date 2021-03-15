@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Quiz III</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <h1>JQuery Quiz III</h1>
+        <hr>
+        <br>
+        <div class="question">
+            1. Find the text in the first paragraph (stripping out the html), then set the html of the last paragraph to show it is just text (the red bold is gone).
+            <pre>
+            &lt;!doctype html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;text demo&lt;/title&gt;
+            &lt;style&gt;<pre><code>
+            p {
+            color: blue;
+            margin: 8px;
+            }
+            span {
+            color: red;
+            }</code></pre>
+            &lt;/style&gt;
+            &lt;script src="http://code.jquery.com/jquery-1.9.1.js"&gt;&lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;p>&lt;span&gt;Test&lt;/span&gt; Paragraph.&lt;/p&gt;
+            &lt;p>&lt;/p&gt;
+            &lt;script&gt;
+            &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;
+            <div class="answer">
+                <pre><code>
+                var str = $("p").first().text();
+	           $("p").last().html(str);
+            </code></pre>
+            </div>
+            &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </pre>
+        </div>
+
+
+        <div class="question">
+            2. Write jQuery code to create a red background for the level-2 list items.
+            <pre>
+            &lt;ul class="level-1"&gt;
+                &lt;li class="item-i"&gt;I&lt;/li&gt;
+                &lt;li class="item-ii"&gt;II
+                    &lt;ul class="level-2"&gt;
+                        &lt;li class="item-a"&gt;A&lt;/li&gt;
+                        &lt;li class="item-b"&gt;B
+                            &lt;ul class="level-3"&gt;
+                                &lt;li class="item-1"&gt;1&lt;/li&gt;
+                                &lt;li class="item-2"&gt;2&lt;/li&gt;
+                                &lt;li class="item-3"&gt;3&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;li class="item-c"&gt;C&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;li class="item-iii"&gt;III&lt;/li&gt;
+        &lt;/ul&gt;
+</pre>
+        </div>
+        <div class="answer">
+            <pre><code>
+            $(document).ready(function(){
+            $("level-2").children().css("background-color, "red);
+            });
+            </code></pre>
+
+        </div>
+
+        <div class="question">
+            3. Write jQuery code to select the element that comes immediately before item three and change its background color to blue.
+            <pre>
+            &lt;ul&gt;
+            &lt;li&gt;list item 1&lt;/li&gt;
+            &lt;li&gt;list item 2&lt;/li&gt;
+            &lt;li class="third-item"&gt;list item 3&lt;/li&gt;
+            &lt;li&gt;list item 4&lt;/li&gt;
+            &lt;li&gt;list item 5&lt;/li&gt;
+            &lt;/ul&gt;
+</pre>
+        </div>
+
+        <div class="answer">
+            <pre><code>
+            $(document).ready(function(){
+            $(".third-item").prev().css("background-color", "blue");
+            });
+            </code></pre>
+
+        </div>
+
+        <div class="question">
+            4. Let us one additional requirement for the "Go Vegetarian" button of the Webville Eatery Menu described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of any entree is replaced by "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new requirement.
+        </div>
+
+        <div class="answer">
+            We will detach turkey class and save it with some variable then replace it with "Mashed Potatoes" for the vegetarian version.
+        </div>
+
+        <div class="question">
+
+            5. Write Javascript (jQuery) code to change the color of the parent and grandparent list items of the span of text ("some text") in the following to green.
+            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;script&gt;
+            <pre><code>
+            $(document).ready(function(){
+            &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;
+            <div class="answer">
+             $("span").parentsUntil("div").css("color", "green");
+             </div>
+            });
+            </code></pre>
+            &lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;div class="ancestors"&gt;
+            &lt;div&gt; (great-grandparent)
+            &lt;ul&gt; (grandparent)
+            &lt;li&gt; (direct parent)
+            &lt;span&gt;some text&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </pre>
+        </div>
+
+    </fieldset>
+</body>
+
+</html>
